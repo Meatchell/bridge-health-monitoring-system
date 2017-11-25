@@ -1,0 +1,264 @@
+//全局css样式
+html, body, #app {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'microsoft yahei', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  box-sizing: border-box;
+  min-width: 1366px;
+  overflow-x: auto;
+}
+.main-app {
+  overflow-y: auto;
+}
+body {
+  background-image: url("./assets/imgs/main-bg.png");
+  background-size: cover;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+//滚动条样式
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+
+}
+::-webkit-scrollbar-thumb {
+  height: 20px;
+  -webkit-box-shadow: inset 0 0 2px rgba(255, 255, 0, 0.1);
+  background-color: rgba(209, 209, 209, 0.8);
+  border-radius: 3px;
+}
+
+textarea {
+  resize: none;
+}
+
+/*//废弃标签使用*/
+body u, body strong, body i {
+  font-style: normal;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+strong {
+  cursor: pointer;
+}
+
+.main-bg {
+  background-image: url("assets/imgs/main-bg.png");
+}
+
+//模态框样式高度调整
+body .modal-dialog {
+  width: 600px;
+  margin: 200px auto;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center;
+}
+
+/*//去除padding*/
+.none-padding {
+  padding: 0 !important;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+.fl {
+  float: left !important;
+}
+
+.fr {
+  float: right !important;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+//边框样式
+.my-border {
+  border: 2px solid #3D589B;
+  position: relative;
+  padding: 15px;
+  .angular {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background-size: cover;
+  }
+  .left-top {
+    top: 3px;
+    left: 3px;
+    background-image: url("assets/imgs/top-left.png");
+  }
+  .right-top {
+    top: 3px;
+    right: 3px;
+    background-image: url("assets/imgs/top-right.png");
+  }
+  .right-bottom {
+    bottom: 3px;
+    right: 3px;
+    background-image: url("assets/imgs/right-bottom.png");
+  }
+  .left-bottom {
+    bottom: 3px;
+    left: 3px;
+    background-image: url("assets/imgs/left-bottom.png");
+  }
+}
+
+.flex {
+  display: flex;
+}
+img {
+  display: block;
+  vertical-align: middle;
+}
+.main-app {
+  padding: 1.5%;
+  height: calc(100% - 70px);
+  width: 100%;
+}
+//css动画 from animate.css
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInRight {
+  animation: fadeInRight .8s;
+}
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInRightBig {
+  animation: fadeInRightBig .5s;
+}
+
+//表格样式 添加mytable类名
+table.mytable {
+  border-radius: 6px;
+  width: 100%;
+  border: 2px solid #45569E;
+  thead {
+    tr {
+      background-color: rgba(99, 108, 186, .4);
+      height: 50px;
+    }
+  }
+  tbody {
+    td:not(:last-child) {
+      border-right: 1px solid #2D3564;
+    }
+    tr:nth-child(odd) {
+      background-color: rgba(50, 57, 132, 0)
+    }
+    tr:nth-child(even) {
+      background-color: rgba(50, 57, 132, 0.3);
+    }
+    .space {
+      border: 0;
+      height: 20px;
+    }
+    & > tr:first-child {
+      border: 0;
+      height: 20px;
+      td {
+        border: 0;
+        text-align: center;
+      }
+    }
+    & > tr {
+      text-align: center;
+      height: 40px;
+      td:last-child {
+        button {
+          margin-left: 40px;
+        }
+        .ivu-btn {
+          padding: 2px 15px;
+        }
+      }
+    }
+  }
+}
+//iview checkbox 样式改写
+.message-content {
+  .ivu-checkbox-inner {
+    background-color: rgba(47, 31, 254, 0.28);
+    box-shadow: 0px 4px 4px 0px rgba(7, 33, 85, 0.15);
+    border-style: solid;
+    border-width: 1px;
+    border-image-source: linear-gradient(90deg, #ef565d 0%, #606db9 100%);
+    border-image-slice: 1;
+    border-radius: 0;
+  }
+}
+//高亮文字
+.highlight {
+  color: #00fdff;
+}
+//模态框内容
+h2 {
+  color: #000;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: microsoft yahei
+}
+.ivu-message {
+  color: #000;
+}
+
+//实时监控 时间控件
+.warning-time {
+  .ivu-select-dropdown span {
+    color: #000;
+    font-size: 12px;
+  }
+}
+//数据关联页面
+.dataAssociation {
+  .tiemDown {
+    .ivu-select-dropdown {
+      left: 135px !important;
+    }
+  }
+}
